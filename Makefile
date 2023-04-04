@@ -1,6 +1,6 @@
 start: docker-down-clear docker-pull docker-build-pull docker-up app-init
 stop: docker-down-clear
-check: lint analyze test
+check: cs-lint analyse test
 
 docker-up:
 	docker compose up -d
@@ -18,6 +18,9 @@ app-init: composer-install
 
 composer-install:
 	docker compose run --rm php-cli composer install
+
+composer-require:
+	docker compose run --rm php-cli composer require $(p)
 
 cs-lint:
 	docker compose run --rm php-cli composer cs-lint
