@@ -3,14 +3,17 @@
     "description": "PHP Package Starter",
     "type": "project",
     "require": {
-        "php": "^8.1"
+        "php": "^8.1",
+        "psr/clock": "^1.0",
+        "webmozart/assert": "^1.11",
+        "zorachka/container": "^3.1"
     },
     "license": "MIT",
     "config": {
       "sort-packages": true,
-        "allow-plugins": {
-            "phpstan/extension-installer": true
-        }
+      "allow-plugins": {
+        "phpstan/extension-installer": true
+      }
     },
     "authors": [
           {
@@ -20,12 +23,12 @@
       ],
     "autoload": {
         "psr-4": {
-            "Zorachka\\": "./src"
+            "Zorachka\\Clock\\": "./src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Zorachka\\": "./tests"
+            "Tests\\Zorachka\\Clock\\": "./tests"
         }
     },
     "require-dev": {
@@ -39,6 +42,6 @@
         "cs-lint": "php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes --dry-run --diff",
         "cs-fix": "php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes",
         "analyse": "phpstan analyse -c phpstan.neon",
-        "test": "bin/phpunit --colors=always"
+        "test": "vendor/bin/phpunit --colors=always"
     }
 }
