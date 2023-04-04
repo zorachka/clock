@@ -1,6 +1,6 @@
 {
-    "name": "zorachka/php-package-starter",
-    "description": "PHP Package Starter",
+    "name": "zorachka/clock",
+    "description": "PSR-20 ClockInterface implementation",
     "type": "project",
     "require": {
         "php": "^8.1",
@@ -10,17 +10,17 @@
     },
     "license": "MIT",
     "config": {
-      "sort-packages": true,
-      "allow-plugins": {
-        "phpstan/extension-installer": true
-      }
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
     },
     "authors": [
-          {
-              "name": "Siarhei Bautrukevich",
-              "email": "hello@bautrukevich.com"
-          }
-      ],
+        {
+            "name": "Siarhei Bautrukevich",
+            "email": "hello@bautrukevich.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Zorachka\\Clock\\": "./src"
