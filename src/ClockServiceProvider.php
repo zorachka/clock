@@ -9,7 +9,7 @@ use Psr\Clock\ClockInterface;
 use Psr\Container\ContainerInterface;
 use Zorachka\Container\ServiceProvider;
 
-final class ClockConfigProvider implements ServiceProvider
+final class ClockServiceProvider implements ServiceProvider
 {
     public static function getDefinitions(): array
     {
